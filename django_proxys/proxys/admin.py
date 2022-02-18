@@ -1,3 +1,9 @@
 from django.contrib import admin
+from proxys.models import Proxy
 
-# Register your models here.
+
+class Proxys(admin.ModelAdmin):
+    list_diplay = ('ip_address', 'port', 'protocol', 'country', 'uptime')
+
+
+admin.site.register(Proxy, Proxys)
