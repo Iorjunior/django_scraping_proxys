@@ -29,7 +29,7 @@ def get_data_in_tr(tr):
         'country': country,
         'region': region,
         'city': city,
-        'uptime': float(uptime),
+        'uptime': int(float(uptime)),
         'response': int(response),
         'transfer': int(transfer)
     }

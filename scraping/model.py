@@ -1,7 +1,7 @@
 from peewee import SqliteDatabase, Model, CharField, IntegerField, DecimalField
 
 
-DB_PATH = 'db.sqlite3'
+DB_PATH = './django_proxys/db.sqlite3'
 db = SqliteDatabase(DB_PATH)
 
 
