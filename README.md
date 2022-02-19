@@ -15,7 +15,7 @@
 
 ### :earth_americas: Acessar o projeto
 
-O projeto esta rodando no Heroku, [Acesse]() 
+O projeto esta rodando no Heroku, [Acesse](https://django-scraping.herokuapp.com/) 
 
 para habilitar a parte de edição, use as seguintes credencias: 
 <br/>
