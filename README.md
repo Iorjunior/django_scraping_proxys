@@ -21,7 +21,7 @@ para habilitar a parte de edição, use as seguintes credencias:
 <br/>
 username:`visitante`
 <br/>
-password:`1234`
+password:`visi1234`
 
 ---
 
