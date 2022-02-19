@@ -1,0 +1,25 @@
+{% extends "proxys/base.html" %} {% block content%}
+
+<div class="bg-gray-200 h-screen flex flex-col justify-center">
+  <form
+    action=""
+    method="POST"
+    class="container mx-auto bg-white px-8 py-14 rounded-md w-96"
+  >
+    {% csrf_token %}
+    <span class="text-2xl font-bold">Deseja Deletar o Proxy?</span>
+    <div class="mb-6">
+      {{object}}
+    </div>
+    <button
+      type="submit"
+      class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+    >
+      Deletar
+    </button>
+  </form>
+</div>
+</form>
+
+{% endblock %}
+

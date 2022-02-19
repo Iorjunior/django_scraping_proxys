@@ -1,0 +1,47 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<div class="bg-gray-200 h-screen flex flex-col justify-center">
+  <form
+    action=""
+    method="POST"
+    class="container mx-auto bg-white px-8 py-14 rounded-md w-96"
+  >
+    {% csrf_token %}
+    <span class="text-2xl font-bold">Entrar</span>
+    <div class="mb-6">
+      <label
+        for="id_username"
+        class="block mb-2 text-sm font-medium text-gray-900"
+        >Usuario:</label
+      >
+      <input
+        type="text"
+        name="username"
+        id="id_username"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="usuario"
+        required
+      />
+    </div>
+    <div class="mb-6">
+      <label
+        for="id_password"
+        class="block mb-2 text-sm font-medium text-gray-900"
+        >Senha:</label
+      >
+      <input
+        type="password"
+        name="password"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        required
+        id="id_password"
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+    >
+      Entrar
+    </button>
+  </form>
+</div>

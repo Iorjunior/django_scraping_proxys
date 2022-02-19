@@ -1,0 +1,181 @@
+{% extends "proxys/base.html" %} {% block content%}
+
+<div class="container mx-auto m-4 flex justify-center">
+  <div class="bg-white rounded p-4 w-3/4">
+    <div class="">
+      <h3 class="text-2xl text-gray-800">Cadastrar Proxy</h3>
+      <p class="text-sm text-gray-600">Prencha todos os campos</p>
+    </div>
+    <form action="" method="POST" class="">
+      {% csrf_token %}
+      <div class="grid xl:grid-cols-2 xl:gap-6">
+        <div class="mb-2">
+          <label
+            for="id_ip_address"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >IP Address:</label
+          >
+          <input
+            type="text"
+            name="ip_address"
+            maxlength="15"
+            required
+            id="id_ip_address"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        <div class="mb-2">
+          <label
+            for="id_port"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Port:</label
+          >
+          <input
+            type="text"
+            name="port"
+            maxlength="5"
+            required
+            id="id_port"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+      </div>
+
+      <div class="grid xl:grid-cols-2 xl:gap-6">
+        <div class="mb-2">
+          <label
+            for="id_protocol"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Protocol:</label
+          >
+          <input
+            type="text"
+            name="protocol"
+            maxlength="5"
+            required
+            id="id_protocol"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        <div class="mb-2">
+          <label
+            for="id_anonymity"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Anonymity:</label
+          >
+          <input
+            type="text"
+            name="anonymity"
+            maxlength="4"
+            value="None"
+            required
+            id="id_anonymity"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label
+          for="id_country"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Country:</label
+        >
+        <input
+          type="text"
+          name="country"
+          maxlength="56"
+          required
+          id="id_country"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        />
+      </div>
+
+      <div class="mb-2">
+        <label
+          for="id_region"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Region:</label
+        >
+        <input
+          type="text"
+          name="region"
+          maxlength="56"
+          required
+          id="id_region"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        />
+      </div>
+      <div class="mb-2">
+        <label
+          for="id_city"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >City:</label
+        >
+        <input
+          type="text"
+          name="city"
+          maxlength="56"
+          required
+          id="id_city"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        />
+      </div>
+
+      <div class="grid xl:grid-cols-3 xl:gap-6">
+        <div class="mb-2">
+          <label
+            for="id_uptime"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Uptime:</label
+          >
+          <input
+            type="number"
+            name="uptime"
+            step="0.01"
+            required
+            id="id_uptime"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        <div class="mb-2">
+          <label
+            for="id_response"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Response</label
+          >
+          <input
+            type="text"
+            name="response"
+            required
+            id="id_response"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        <div class="mb-2">
+          <label
+            for="id_transfer"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Transfer</label
+          >
+          <input
+            type="number"
+            name="transfer"
+            required
+            id="id_transfer"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        class="text-white bg-green-700 hover:bg-green-600 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+      >
+        Cadastrar
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

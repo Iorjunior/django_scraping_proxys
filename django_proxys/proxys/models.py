@@ -10,6 +10,9 @@ class Proxy(models.Model):
     country = models.CharField(max_length=56)
     region = models.CharField(max_length=56)
     city = models.CharField(max_length=56)
-    uptime = models.DecimalField(decimal_places=2, max_digits=4)
+    uptime = models.IntegerField()
     response = models.IntegerField()
     transfer = models.IntegerField()
+
+    def __str__(self):
+        return self.ip_address
